@@ -1,0 +1,344 @@
+{
+  "current": {
+    "color_header_bg": "#222222",
+    "color_header_links": "#ffffff",
+    "color_body_bg": "#f0f0f0",
+    "color_content_bg": "#ffffff",
+    "color_body_headings": "#222222",
+    "color_body_text": "#666",
+    "color_button_bg": "#00bccc",
+    "color_button_text": "#fff",
+    "color_footer_bg": "#222222",
+    "color_footer_text": "#ffffff",
+    "color_hero_text": "#fff",
+    "color_hero_bg": "#00bccc",
+    "type_accent_family": "Google_Lato_400_sans",
+    "type_accent_bold": true,
+    "type_accent_spacing": false,
+    "type_accent_transform": true,
+    "type_base_family": "Google_Lato_400_sans",
+    "type_base_size": "16px",
+    "type_nav_size": "14px",
+    "type_nav_spacing": true,
+    "type_nav_transform": true,
+    "product_images_padding": true,
+    "product_vendor_enable": false,
+    "social_facebook_link": "https:\/\/www.facebook.com\/wearhausinc",
+    "social_twitter_link": "https:\/\/twitter.com\/wearhausinc",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/instagram.com\/wearhausinc\/",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "https:\/\/www.snapchat.com\/add\/wearhausinc",
+    "social_youtube_link": "https:\/\/www.youtube.com\/user\/wearhausinc",
+    "social_vimeo_link": "",
+    "social_sharing_products": true,
+    "social_sharing_blog": false,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "favicon": "shopify:\/\/shop_images\/favicon2.png",
+    "checkout_use_header_image": false,
+    "checkout_header_image": "",
+    "checkout_logo": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_use_body_background_image": false,
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_use_sidebar_background_image": false,
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Lato",
+    "checkout_body_font": "Lato",
+    "checkout_accent_color": "#00bccc",
+    "checkout_button_color": "#00bccc",
+    "checkout_error_color": "#ff6d6d",
+    "checkout_banner_background_color": "#fff",
+    "checkout_call_to_action_color": "#d8232f",
+    "color_newsletter_input": "#303030",
+    "sections": {
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "1478920440865": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DJ.JPG",
+              "title": "Wearhaus Arc",
+              "subheading": "The world's first wireless audio sharing headphones",
+              "link": "shopify:\/\/products\/wearhaus-arc"
+            }
+          },
+          "1478920520631": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Subway_1.jpg",
+              "title": "Light Ring",
+              "subheading": "Customize your colors on the fly to match your color or mood",
+              "link": "shopify:\/\/products\/wearhaus-arc"
+            }
+          }
+        },
+        "block_order": [
+          "1478920440865",
+          "1478920520631"
+        ],
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "linklist": {
+            "type": "menu",
+            "settings": {
+              "link_list": "footer"
+            }
+          },
+          "social": {
+            "type": "social",
+            "settings": {
+              "title_enable": true,
+              "title": "Follow us",
+              "align": "center"
+            }
+          }
+        },
+        "block_order": [
+          "linklist",
+          "social"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo_white_transparent_small.png",
+          "logo_max_width": "60",
+          "main_linklist": "main-menu",
+          "promo_bar_enable": false,
+          "promo_bar_text": "",
+          "promo_bar_link": ""
+        }
+      },
+      "collection-filters": {
+        "type": "collection-filters",
+        "settings": {
+          "product_tags_enable": true,
+          "product_sorting_enable": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "enable_ajax": true,
+          "stock_enable": false
+        }
+      },
+      "1478920411084": {
+        "type": "featured-product",
+        "settings": {
+          "product": "wearhaus-arc"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": true
+        }
+      }
+    },
+    "content_for_index": [
+      "1478920411084"
+    ]
+  },
+  "presets": {
+    "Snowboards": {
+      "checkout_accent_color": "#006eff",
+      "checkout_banner_background_color": "#fff",
+      "checkout_button_color": "#006eff",
+      "checkout_call_to_action_color": "#006eff",
+      "checkout_use_header_image": false,
+      "color_body_bg": "#f7f7f7",
+      "color_body_headings": "#030303",
+      "color_body_text": "#666",
+      "color_button_bg": "#006eff",
+      "color_button_text": "#fff",
+      "color_content_bg": "#fff",
+      "color_footer_bg": "#030303",
+      "color_footer_text": "#fff",
+      "color_header_bg": "#030303",
+      "color_header_links": "#fff",
+      "color_hero_bg": "#006eff",
+      "color_hero_text": "#fff",
+      "color_newsletter_input": "#1a1a1a",
+      "type_accent_bold": false,
+      "type_accent_family": "Google_Unica+One_400_sans",
+      "type_accent_spacing": true,
+      "type_accent_transform": true,
+      "type_base_family": "Google_Karla_400_sans",
+      "type_base_size": "16px",
+      "type_nav_size": "14px",
+      "type_nav_spacing": true,
+      "type_nav_transform": true,
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "placeholder": {
+              "type": "slide",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "placeholder"
+          ],
+          "settings": {
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "linklist": {
+              "type": "menu",
+              "settings": {
+              }
+            },
+            "social": {
+              "type": "social",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "linklist",
+            "social"
+          ],
+          "settings": {
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collections-0": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "featured-collections-1": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "featured-collections-2": {
+              "type": "collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "featured-collections-0",
+            "featured-collections-1",
+            "featured-collections-2"
+          ],
+          "settings": {
+          }
+        },
+        "featured-products": {
+          "type": "featured-products",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "image-content": {
+          "type": "image-content",
+          "blocks": {
+            "image-content-0": {
+              "type": "image_block",
+              "settings": {
+              }
+            },
+            "image-content-1": {
+              "type": "text_block",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "image-content-0",
+            "image-content-1"
+          ],
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "featured-collections",
+        "featured-products",
+        "image-content"
+      ]
+    },
+    "Outdoors": {
+      "checkout_accent_color": "#f4743c",
+      "checkout_banner_background_color": "#fff",
+      "checkout_button_color": "#f4743c",
+      "checkout_call_to_action_color": "#f4743c",
+      "checkout_use_header_image": false,
+      "color_body_bg": "#f7f7f7",
+      "color_body_headings": "#1a1a1a",
+      "color_body_text": "#666",
+      "color_button_bg": "#c04f1d",
+      "color_button_text": "#fff",
+      "color_content_bg": "#ffffff",
+      "color_footer_bg": "#213236",
+      "color_footer_text": "#fff",
+      "color_header_bg": "#213236",
+      "color_header_links": "#ffffff",
+      "color_hero_bg": "#f4743c",
+      "color_hero_text": "#fff",
+      "color_newsletter_input": "#425154",
+      "type_accent_bold": true,
+      "type_accent_family": "Google_Lora_400_serif",
+      "type_accent_spacing": false,
+      "type_accent_transform": false,
+      "type_base_family": "Google_Roboto_400_sans",
+      "type_base_size": "14px",
+      "type_nav_size": "15px",
+      "type_nav_spacing": false,
+      "type_nav_transform": false
+    },
+    "Boxing": {
+      "checkout_accent_color": "#d8232f",
+      "checkout_banner_background_color": "#fff",
+      "checkout_button_color": "#d8232f",
+      "checkout_call_to_action_color": "#d8232f",
+      "checkout_use_header_image": false,
+      "color_body_bg": "#f0f0f0",
+      "color_body_headings": "#222222",
+      "color_body_text": "#666",
+      "color_button_bg": "#d8232f",
+      "color_button_text": "#fff",
+      "color_content_bg": "#ffffff",
+      "color_footer_bg": "#222222",
+      "color_footer_text": "#ffffff",
+      "color_header_bg": "#222222",
+      "color_header_links": "#ffffff",
+      "color_hero_bg": "#d8232f",
+      "color_hero_text": "#fff",
+      "color_newsletter_input": "#303030",
+      "type_accent_bold": true,
+      "type_accent_family": "Google_Open+Sans+Condensed_400_sans",
+      "type_accent_spacing": false,
+      "type_accent_transform": true,
+      "type_base_family": "Google_Source+Sans+Pro_400_sans",
+      "type_base_size": "17px",
+      "type_nav_size": "14px",
+      "type_nav_spacing": true,
+      "type_nav_transform": true
+    }
+  }
+}
