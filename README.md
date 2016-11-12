@@ -1,0 +1,2 @@
+# shopify
+Wearhaus Shopify theme
