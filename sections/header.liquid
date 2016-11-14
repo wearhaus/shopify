@@ -149,8 +149,29 @@
             <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
             <span class="site-header__cart-indicator {% if cart.item_count == 0 %}hide{% endif %}"></span>
           </a>
+        </div>
       </div>
-      </div>
+    </div>
+  </div>
+
+  <div id="NotificationSuccess" class="notification notification--success" aria-hidden="true">
+    <div class="page-width notification__inner notification__inner--has-link">
+      <a href="/cart" class="notification__link">
+        <span class="notification__message">{{ 'products.product.product_added_to_cart_html' | t }}</span>
+      </a>
+      <button type="button" class="text-link notification__close">
+        {% include 'icon-close' %}
+        <span class="icon__fallback-text">{{ 'cart.general.close_notification' | t }}</span>
+      </button>
+    </div>
+  </div>
+  <div id="NotificationError" class="notification notification--error" aria-hidden="true">
+    <div class="page-width notification__inner">
+      <span class="notification__message notification__message--error" aria-live="assertive" aria-atomic="true"></span>
+      <button type="button" class="text-link notification__close">
+        {% include 'icon-close' %}
+        <span class="icon__fallback-text">{{ 'cart.general.close_notification' | t }}</span>
+      </button>
     </div>
   </div>
 
