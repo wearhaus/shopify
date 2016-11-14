@@ -14,7 +14,7 @@
   {% assign current_variant = product.selected_or_first_available_variant %}
 
   <div class="grid product-single">
-    <div class="grid__item {% if product.images.size > 1 %}medium-up--three-fifths{% else %}medium-up--one-half{% endif %}">
+    <div class="grid__item {% if product.images.size > 1 %}medium-up--one-half{% else %}medium-up--one-half{% endif %}">
       <div class="photos">
         <div class="photos__item photos__item--main">
           <div class="product-single__photo" id="ProductPhoto">
@@ -57,7 +57,7 @@
       </div>
     </div>
 
-    <div class="grid__item {% if product.images.size > 1 %}medium-up--two-fifths{% else %}medium-up--one-half{% endif %}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <div class="grid__item {% if product.images.size > 1 %}medium-up--one-half{% else %}medium-up--one-half{% endif %}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
       <div class="product-single__info-wrapper">
         <meta itemprop="priceCurrency" content="{{ shop.currency }}">
         <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
