@@ -1863,13 +1863,13 @@ theme.headerNav = (function() {
       navWidth += $(el).width();
     });
 
-    if (navWidth > parentWidth) {
+    /*if (navWidth > parentWidth) {
       $(selectors.siteNav).addClass(hideClass);
       $(selectors.siteNavCompressed).removeClass(hideClass);
     } else {
       $(selectors.siteNav).removeClass(hideClass);
       $(selectors.siteNavCompressed).addClass(hideClass);
-    }
+    }*/
   }
 
   function initMegaNavs() {

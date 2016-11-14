@@ -78,7 +78,7 @@
           <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
         </button>
       </div>
-      <div class="grid__item small--one-half medium-up--two-thirds small--text-center">
+      <div class="grid__item small--one-half medium-up--one-third small--text-center">
         {% if template == 'index' %}
           <h1 class="site-header__logo" itemscope itemtype="http://schema.org/Organization">
         {% else %}
@@ -103,101 +103,53 @@
         {% endif %}
       </div>
 
-      <div class="grid__item small--one-quarter medium-up--one-third text-right">
+      <div class="grid__item small--one-quarter medium-up--two-thirds text-right">
         <div id="SiteNavSearchCart">
-          <a href="/cart" class="site-header__link site-header__cart">
+          <ul class="site-nav list--inline small--hide" id="SiteNav">
+            {% for link in linklists[section.settings.main_linklist].links %}
+              {% assign child_list_handle = link.title | handleize %}
+              {% comment %}
+                Use full width layout if there are 7+ links or parent has products
+              {% endcomment %}
+              {% assign meganav_use_columns = false %}
+              {% assign nav_parent_product_count = link.object.products_count %}
+              {% unless nav_parent_product_count == blank or nav_parent_product_count == 0 %}
+                {% assign meganav_use_columns = true %}
+              {% endunless %}
+              {% if linklists[child_list_handle].links.size > 7 %}
+                {% assign meganav_use_columns = true %}
+              {% endif %}
+
+              {% if linklists[child_list_handle].links != blank %}
+                <li class="site-nav__item{% if link.active %} site-nav--active{% endif %}{% unless meganav_use_columns %} site-nav__item--no-columns{% endunless %}" aria-haspopup="true">
+                  <a href="{{ link.url }}" class="site-nav__link site-nav__meganav-toggle" id="SiteNavLabel-{{ child_list_handle }}" data-aria-controls="SiteNavLinklist-{{ child_list_handle }}">{{ link.title }}
+                    {% include 'icon-arrow-down' %}
+                  </a>
+
+                  <div class="site-nav__dropdown meganav" id="SiteNavLinklist-{{ child_list_handle }}" aria-labelledby="SiteNavLabel-{{ child_list_handle }}" role="navigation">
+                    <ul class="meganav__nav page-width">
+                      {% include 'meganav', fixed_width: false, show_title: true, show_links: true, show_products: true %}
+                    </ul>
+                  </div>
+                </li>
+              {% else %}
+                <li class="site-nav__item{% if link.active %} site-nav--active{% endif %}">
+                  <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+            <a href="/cart" class="site-header__link site-header__cart">
+              {% include 'icon-cart' %}
+              <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
+              <span class="site-header__cart-indicator {% if cart.item_count == 0 %}hide{% endif %}"></span>
+            </a>
+          </ul>
+          <a href="/cart" class="site-header__link site-header__cart medium-up--hide">
             {% include 'icon-cart' %}
             <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
             <span class="site-header__cart-indicator {% if cart.item_count == 0 %}hide{% endif %}"></span>
           </a>
-        </div>
       </div>
-    </div>
-  </div>
-
-  <div id="StickNavWrapper">
-    <div id="StickyBar" class="sticky">
-      <nav class="nav-bar small--hide" role="navigation" id="StickyNav">
-        <div class="page-width">
-          <div class="grid grid--table">
-            <div class="grid__item {% if shop.customer_accounts_enabled %}four-fifths{% else%}seven-eighths{% endif %}" id="SiteNavParent">
-              <button type="button" class="hide text-link site-nav__link site-nav__link--compressed js-drawer-open-left" id="SiteNavCompressed">
-                {% include 'icon-hamburger' %}
-                <span class="site-nav__link-menu-label">{{ 'general.drawers.menu' | t }}</span>
-                <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
-              </button>
-              <ul class="site-nav list--inline" id="SiteNav">
-                {% for link in linklists[section.settings.main_linklist].links %}
-                  {% assign child_list_handle = link.title | handleize %}
-                  {% comment %}
-                    Use full width layout if there are 7+ links or parent has products
-                  {% endcomment %}
-                  {% assign meganav_use_columns = false %}
-                  {% assign nav_parent_product_count = link.object.products_count %}
-                  {% unless nav_parent_product_count == blank or nav_parent_product_count == 0 %}
-                    {% assign meganav_use_columns = true %}
-                  {% endunless %}
-                  {% if linklists[child_list_handle].links.size > 7 %}
-                    {% assign meganav_use_columns = true %}
-                  {% endif %}
-
-                  {% if linklists[child_list_handle].links != blank %}
-                    <li class="site-nav__item{% if link.active %} site-nav--active{% endif %}{% unless meganav_use_columns %} site-nav__item--no-columns{% endunless %}" aria-haspopup="true">
-                      <a href="{{ link.url }}" class="site-nav__link site-nav__meganav-toggle" id="SiteNavLabel-{{ child_list_handle }}" data-aria-controls="SiteNavLinklist-{{ child_list_handle }}">{{ link.title }}
-                        {% include 'icon-arrow-down' %}
-                      </a>
-
-                      <div class="site-nav__dropdown meganav" id="SiteNavLinklist-{{ child_list_handle }}" aria-labelledby="SiteNavLabel-{{ child_list_handle }}" role="navigation">
-                        <ul class="meganav__nav page-width">
-                          {% include 'meganav', fixed_width: false, show_title: true, show_links: true, show_products: true %}
-                        </ul>
-                      </div>
-                    </li>
-                  {% else %}
-                    <li class="site-nav__item{% if link.active %} site-nav--active{% endif %}">
-                      <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-            <div class="grid__item {% if shop.customer_accounts_enabled %}one-fifth{% else%}one-eighth{% endif %} text-right">
-              <div class="sticky-only" id="StickyNavSearchCart"></div>
-              {% if shop.customer_accounts_enabled %}
-                <div class="customer-login-links sticky-hidden">
-                  {% if customer %}
-                    <a href="/account">
-                      {{ 'layout.customer.account' | t }}
-                    </a>
-                    {{ 'layout.customer.log_out' | t | customer_logout_link }}
-                  {% else %}
-                    {{ 'layout.customer.account' | t | customer_login_link }}
-                  {% endif %}
-                </div>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div id="NotificationSuccess" class="notification notification--success" aria-hidden="true">
-        <div class="page-width notification__inner notification__inner--has-link">
-          <a href="/cart" class="notification__link">
-            <span class="notification__message">{{ 'products.product.product_added_to_cart_html' | t }}</span>
-          </a>
-          <button type="button" class="text-link notification__close">
-            {% include 'icon-close' %}
-            <span class="icon__fallback-text">{{ 'cart.general.close_notification' | t }}</span>
-          </button>
-        </div>
-      </div>
-      <div id="NotificationError" class="notification notification--error" aria-hidden="true">
-        <div class="page-width notification__inner">
-          <span class="notification__message notification__message--error" aria-live="assertive" aria-atomic="true"></span>
-          <button type="button" class="text-link notification__close">
-            {% include 'icon-close' %}
-            <span class="icon__fallback-text">{{ 'cart.general.close_notification' | t }}</span>
-          </button>
-        </div>
       </div>
     </div>
   </div>
