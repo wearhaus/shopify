@@ -6,14 +6,6 @@
 
 <div id="NavDrawer" class="drawer drawer--left">
   <div class="drawer__inner">
-    <form action="/search" method="get" class="drawer__search" role="search">
-      <input type="search" name="q" placeholder="{{ 'general.search.placeholder' | t }}" aria-label="{{ 'general.search.placeholder' | t }}" class="drawer__search-input">
-
-      <button type="submit" class="text-link drawer__search-submit">
-        {% include 'icon-search' %}
-        <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
-      </button>
-    </form>
     <ul class="drawer__nav">
       {% for link in linklists[section.settings.main_linklist].links %}
         {% assign child_list_handle = link.title | handleize %}
@@ -113,19 +105,6 @@
 
       <div class="grid__item small--one-quarter medium-up--one-third text-right">
         <div id="SiteNavSearchCart">
-          <form action="/search" method="get" class="site-header__search small--hide" role="search">
-            {% comment %}<input type="hidden" name="type" value="product">{% endcomment %}
-            <div class="site-header__search-inner">
-              <label for="SiteNavSearch" class="visually-hidden">{{ 'general.search.placeholder' | t }}</label>
-              <input type="search" name="q" id="SiteNavSearch" placeholder="{{ 'general.search.placeholder' | t }}" aria-label="{{ 'general.search.placeholder' | t }}" class="site-header__search-input">
-            </div>
-
-            <button type="submit" class="text-link site-header__link site-header__search-submit">
-              {% include 'icon-search' %}
-              <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
-            </button>
-          </form>
-
           <a href="/cart" class="site-header__link site-header__cart">
             {% include 'icon-cart' %}
             <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
