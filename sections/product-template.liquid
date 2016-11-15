@@ -2,7 +2,7 @@
   {% assign product_image_size = '480x480' %}
 
   {%- if section.settings.wearhaus_arc -%}
-    {% assign product = all_products['wearhaus-arc'] %}
+    {% assign product = collections.frontpage.products.first %}
   {%- endif -%}
 
   <meta itemprop="name" content="{{ product.title }}">
