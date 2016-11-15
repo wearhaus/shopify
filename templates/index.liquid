@@ -1,3 +1,10 @@
+{% comment %}
+This commented out portion is the original default theme.liquid. We can use this once we have additional products.
+
 {% section 'slideshow' %}
 
 {{ content_for_index }}
+{% endcomment %}
+
+{% assign wearhaus-arc = all_products['wearhaus-arc'] %}
+{% section 'product-template' %}
