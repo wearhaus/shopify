@@ -86,7 +86,7 @@
         {% endif %}
           {% if section.settings.logo != blank %}
             {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
-            <a href="/" itemprop="url" class="site-header__logo-link">
+            <a href="http://www.wearhaus.com" itemprop="url" class="site-header__logo-link">
               <img src="{{ section.settings.logo | img_url: image_size }}"
                    srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
                    alt="{{ section.settings.logo.alt | default: shop.name }}"
@@ -94,7 +94,7 @@
             </a>
           {% else %}
             {% assign shop_name_length = shop.name.size %}
-            <a href="/" itemprop="url" {% if shop_name_length > 10 %} class="site-header__shop-name--small"{% endif %}>{{ shop.name }}</a>
+            <a href="http://www.wearhaus.com" itemprop="url" {% if shop_name_length > 10 %} class="site-header__shop-name--small"{% endif %}>{{ shop.name }}</a>
           {% endif %}
         {% if template == 'index' %}
           </h1>
